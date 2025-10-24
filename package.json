@@ -11,8 +11,9 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "migrate": "tsx src/scripts/migrate.ts",
-    "railway:build": "pnpm build && pnpm migrate",
-    "railway:start": "node dist/server.js"
+    "railway:build": "tsc",
+    "railway:start": "node dist/server.js",
+    "postinstall": "pnpm build"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.5",

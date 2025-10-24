@@ -23,6 +23,9 @@ importers:
       mysql2:
         specifier: ^3.6.5
         version: 3.15.3
+      tsx:
+        specifier: ^4.7.1
+        version: 4.20.6
       zod:
         specifier: ^4.1.12
         version: 4.1.12
@@ -30,9 +33,6 @@ importers:
       '@types/node':
         specifier: ^20.11.17
         version: 20.19.21
-      tsx:
-        specifier: ^4.7.1
-        version: 4.20.6
       typescript:
         specifier: ^5.8.3
         version: 5.9.3
