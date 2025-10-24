@@ -1,0 +1,42 @@
+{
+  "name": "country-currency-api",
+  "version": "1.0.0",
+  "description": "A RESTful API service for country data with currency exchange rates and GDP estimation",
+  "type": "module",
+  "engines": {
+    "node": ">=20.11.17"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate": "tsx src/scripts/migrate.ts",
+    "railway:build": "pnpm build && pnpm migrate",
+    "railway:start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.5",
+    "@hono/zod-validator": "^0.7.4",
+    "canvas": "^3.2.0",
+    "hono": "^4.9.12",
+    "mysql2": "^3.6.5",
+    "zod": "^4.1.12",
+    "tsx": "^4.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.8.3"
+  },
+  "keywords": [
+    "api",
+    "countries",
+    "currency",
+    "exchange-rates",
+    "gdp",
+    "hono",
+    "typescript",
+    "mysql"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
