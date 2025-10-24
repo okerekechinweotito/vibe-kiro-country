@@ -38,11 +38,11 @@ A RESTful API service that fetches country data from external APIs, processes cu
    PORT=3000
 
    # Database Configuration
-   DB_HOST=localhost
-   DB_PORT=3306
-   DB_USER=your_username
-   DB_PASSWORD=your_password
-   DB_NAME=countries_db
+   MYSQLHOST=localhost
+   MYSQLPORT=3306
+   MYSQLUSER=your_username
+   MYSQLPASSWORD=your_password
+   MYSQLDATABASE=countries_db
 
    # External API Configuration
    COUNTRIES_API_URL=https://restcountries.com/v3.1
@@ -295,11 +295,11 @@ All API endpoints return consistent error responses:
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
 | `PORT` | Server port | `3000` | No |
-| `DB_HOST` | MySQL host | `localhost` | Yes |
-| `DB_PORT` | MySQL port | `3306` | Yes |
-| `DB_USER` | MySQL username | - | Yes |
-| `DB_PASSWORD` | MySQL password | - | Yes |
-| `DB_NAME` | MySQL database name | - | Yes |
+| `MYSQLHOST` | MySQL host | `localhost` | Yes |
+| `MYSQLPORT` | MySQL port | `3306` | Yes |
+| `MYSQLUSER` | MySQL username | - | Yes |
+| `MYSQLPASSWORD` | MySQL password | - | Yes |
+| `MYSQLDATABASE` | MySQL database name | - | Yes |
 | `COUNTRIES_API_URL` | REST Countries API URL | `https://restcountries.com/v3.1` | No |
 | `EXCHANGE_API_URL` | Exchange Rates API URL | `https://open.er-api.com/v6` | No |
 | `API_TIMEOUT` | External API timeout (ms) | `10000` | No |

@@ -7,6 +7,7 @@ dist/
 build/
 
 # Environment variables
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -87,3 +88,6 @@ temp/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Kiro files
+.kiro/

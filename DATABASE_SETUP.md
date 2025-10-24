@@ -14,11 +14,11 @@ cp .env.example .env
 
 2. Update the `.env` file with your MySQL database credentials:
 ```env
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_NAME=countries_db
+MYSQLHOST=localhost
+MYSQLPORT=3306
+MYSQLUSER=your_username
+MYSQLPASSWORD=your_password
+MYSQLDATABASE=countries_db
 ```
 
 ## Database Setup

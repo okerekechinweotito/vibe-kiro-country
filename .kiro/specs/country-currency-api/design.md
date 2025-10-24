@@ -283,11 +283,11 @@ const validateCountryData = (country: Partial<Country>) => {
 ```typescript
 interface Config {
     PORT: number;
-    DB_HOST: string;
-    DB_PORT: number;
-    DB_NAME: string;
-    DB_USER: string;
-    DB_PASSWORD: string;
+    MYSQLHOST: string;
+    MYSQLPORT: number;
+    MYSQLDATABASE: string;
+    MYSQLUSER: string;
+    MYSQLPASSWORD: string;
     COUNTRIES_API_URL: string;
     EXCHANGE_API_URL: string;
     CACHE_DIR: string;
