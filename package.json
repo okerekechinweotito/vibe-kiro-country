@@ -8,10 +8,10 @@
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "migrate": "tsx src/scripts/migrate.ts",
-    "railway:build": "tsc",
+    "railway:build": "tsc -p tsconfig.json",
     "railway:start": "node dist/server.js",
     "postinstall": "pnpm build"
   },
