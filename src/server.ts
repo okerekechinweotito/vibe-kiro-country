@@ -1,5 +1,5 @@
 import { serve } from "@hono/node-server";
-import { customLogger } from "./utils/logger.ts";
+import { customLogger } from "./utils/logger.js";
 import { initializeDatabase, closeDatabase } from "./services/db.service.js";
 
 const port = Number(process.env.PORT) || 3000;

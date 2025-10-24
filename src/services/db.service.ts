@@ -1,9 +1,6 @@
 import mysql from 'mysql2/promise';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
-import type { Strings_GET } from "../models/string.schema.ts";
-
-export const analyzedStrings = new Map<string, Strings_GET>();
 
 // Database configuration interface
 interface DatabaseConfig {

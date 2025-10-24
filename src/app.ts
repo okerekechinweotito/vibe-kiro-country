@@ -2,7 +2,6 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { prettyJSON } from "hono/pretty-json";
 import { logger } from "hono/logger";
-import stringRoutes from "./routes/strings.route.ts";
 import countriesRoutes from "./routes/countries.route.ts";
 import { errorHandler } from "./middleware/error-handler.js";
 
@@ -19,11 +18,10 @@ app.use("*", errorHandler);
 app.get("/", (c) => {
   return c.json({
     status: 200,
-    message: "Welcome to Countries API!",
+    message: "Welcome to Country Currency API!",
   });
 });
 
-app.route("/strings", stringRoutes);
 app.route("/countries", countriesRoutes);
 
 // Status endpoint - Requirements: 5.1, 5.2, 5.3
