@@ -16,7 +16,6 @@ export interface Country {
   estimated_gdp?: number;
   flag_url?: string;
   last_refreshed_at?: Date;
-  created_at?: Date;
 }
 
 export interface ExternalCountry {
@@ -60,7 +59,6 @@ export const countrySchema = z.object({
   estimated_gdp: z.number().min(0).optional(),
   flag_url: z.string().url().optional(),
   last_refreshed_at: z.date().optional(),
-  created_at: z.date().optional(),
 });
 
 export const externalCountrySchema = z.object({

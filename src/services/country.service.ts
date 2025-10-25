@@ -182,7 +182,7 @@ export class CountryService {
   private async processCountryData(
     externalCountry: ExternalCountry, 
     exchangeRatesMap: Map<string, number | null>
-  ): Promise<Omit<Country, 'id' | 'created_at'>> {
+  ): Promise<Omit<Country, 'id'>> {
     
     // Extract currency information
     let currencyCode: string | null = null;

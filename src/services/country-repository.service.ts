@@ -15,7 +15,7 @@ export class CountryRepository {
    * Insert or update a country record using case-insensitive name matching
    * Requirements: 1.5
    */
-  async upsertCountry(country: Omit<Country, 'id' | 'created_at'>): Promise<Country> {
+  async upsertCountry(country: Omit<Country, 'id'>): Promise<Country> {
     const connection = await this.db.getConnection();
     
     try {
@@ -198,8 +198,7 @@ export class CountryRepository {
       exchange_rate: row.exchange_rate ? parseFloat(row.exchange_rate) : undefined,
       estimated_gdp: row.estimated_gdp ? parseFloat(row.estimated_gdp) : undefined,
       flag_url: row.flag_url,
-      last_refreshed_at: row.last_refreshed_at,
-      created_at: row.created_at
+      last_refreshed_at: row.last_refreshed_at
     };
   }
 }
