@@ -86,6 +86,16 @@ export async function runMigrations(): Promise<void> {
       
       console.log(`Migration ${migrationFile} executed successfully`);
     }
+
+    // Verify that the countries table exists
+    const [rows] = await db.execute("SHOW TABLES LIKE 'countries'");
+    console.log('Verification query result:', rows);
+    if (Array.isArray(rows) && rows.length > 0) {
+      console.log('Verification successful: countries table exists.');
+    } else {
+      console.error('Verification failed: countries table does not exist after migration.');
+    }
+
   } catch (error) {
     console.error('Migration failed:', error);
     throw error;
