@@ -9,10 +9,10 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",
-    "start": "pnpm migrate && node dist/server.js",
+    "start": "node dist/server.js",
     "migrate": "tsx src/scripts/migrate.ts",
     "railway:build": "tsc -p tsconfig.json",
-    "railway:start": "pnpm migrate && node dist/server.js",
+    "railway:start": "node dist/server.js",
     "postinstall": "pnpm build"
   },
   "dependencies": {
